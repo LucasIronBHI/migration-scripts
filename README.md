@@ -1,3 +1,6 @@
+# This fork fixes an issue with the archived repository, hope it helps you
+The original code throws an error "Unexpected token in JSON" when migrating from sql to sql.
+
 # Strapi Migration Scripts
 
 This repository contains notes and scripts to run data migrations between Strapi versions
