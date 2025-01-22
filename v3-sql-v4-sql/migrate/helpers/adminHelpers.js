@@ -51,7 +51,7 @@ async function migrateAdminPermissions() {
       ...item,
       action: migrateUids(item.action),
       subject: migrateSubject(item.subject),
-      properties: migrateProperties(properties ?? { fields: JSON.parse(fields) }),
+      properties: migrateProperties(properties ?? { fields: Array.isArray(fields) ? fields : JSON.parse(fields) }),
       conditions: isPGSQL ? JSON.stringify(item.conditions) : item.conditions,
     }));
     const roleLinks = items.map((item) => ({
